@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="continents">
+        <item>Asia</item>
+        <item>Europe</item>
+        <item>Africa</item>
+        <item>Australia</item>
+        <item>North America</item>
+        <item>South America</item>
+        <item>Antartica</item>
+    </string-array>
+    <string-array name="index_list">
+        <item>ListView basic example</item>
+        <item>ListView with images</item>
+    </string-array>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
@@ -161,6 +176,11 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="list_view_text_size">30sp</dimen>
+    <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
@@ -201,7 +221,10 @@
     <string name="action_settings">Settings</string>
     <string name="app_name">Android_Tutorial_06</string>
     <string name="click_me">Click Me</string>
+    <string name="click_me_07">Tutorial 7</string>
+    <string name="default_data">Continent</string>
     <string name="hello_world">Hello world!</string>
+    <string name="image_description">Continent</string>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -209,6 +232,7 @@
     <eat-comment/>
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_third">ThirdActivity</string>
+    <string name="title_activity_tutorial_7">Tutorial_7</string>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

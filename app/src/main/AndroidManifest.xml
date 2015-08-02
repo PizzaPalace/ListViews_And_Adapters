@@ -32,6 +32,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.matrimonysense.android_tutorial_06.MainActivity" />
         </activity>
+        <activity
+            android:name="com.com.training.android_tutorial_07.Tutorial_7Activity"
+            android:label="@string/title_activity_tutorial_7" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,36 +1,63 @@
 package com.matrimonysense.android_tutorial_06;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
+import com.com.training.android_tutorial_07.Tutorial_7Activity;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    Button mButton;
+
+    ListView mListView;
+    ArrayAdapter<String> mAdapter;
+    ArrayList<String> mIndexList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.mButton = (Button) findViewById(R.id.button);
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        setTitle("Index");
 
-                Intent intent = new Intent(getApplicationContext(),ThirdActivity.class);
-                startActivity(intent);
+        mListView = (ListView)findViewById(R.id.list_view);
+        mIndexList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.index_list)));
+        mAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,mIndexList);
+        mListView.setAdapter(mAdapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent;
+                switch(position){
+
+                     case 0:
+                         intent = new Intent(getApplicationContext(),ThirdActivity.class);
+                         startActivity(intent);
+                         break;
+                    case 1:
+                         intent = new Intent(getApplicationContext(),Tutorial_7Activity.class);
+                        startActivity(intent);
+                        break;
+                }
 
             }
         });
+
+
+
 
         // Declare and assign variables, a String Array and a string variable
         //String[] stringArray = {"alpha","beta","gamma","delta","epsilon","phi"};

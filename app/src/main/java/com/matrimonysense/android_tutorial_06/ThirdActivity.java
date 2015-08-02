@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 public class ThirdActivity extends AppCompatActivity {
 
     ListView mListView;
+
     ArrayAdapter mArrayAdapter;
     ArrayList<String> mArrayList;
     LayoutInflater mLayoutInflater;
@@ -32,6 +34,8 @@ public class ThirdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
+
+       setTitle("ListView basic example");
 
         mLayoutInflater = getLayoutInflater();
 
@@ -99,6 +103,7 @@ public class ThirdActivity extends AppCompatActivity {
 
         this.mListView = (ListView) findViewById(R.id.list_view);
 
+
         // Uncomment to use ArrayAdapter, comment MyAdapter while using this
         //this.mArrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,android.R.id.text1,mArrayList);
         //mListView.setAdapter(mArrayAdapter);
@@ -106,7 +111,6 @@ public class ThirdActivity extends AppCompatActivity {
         // Assign MyAdapter to ListView
         myAdapter = new MyAdapter();
         mListView.setAdapter(myAdapter);
-
 
 
     }
@@ -164,6 +168,7 @@ public class ThirdActivity extends AppCompatActivity {
 
             TextView textView = (TextView)convertView.findViewById(R.id.text_view);
             textView.setText(mArrayList.get(position));
+
             return convertView;
         }
     }

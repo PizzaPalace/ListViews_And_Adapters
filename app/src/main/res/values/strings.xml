@@ -1,7 +1,48 @@
 <resources>
+    <!-- TutorialsActivity -->
+    <string name="edit_text_hint">Enter something here</string>
+    <string-array name="days_of_week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+    <string name="dynamic_spinner_title">Dynamic Spinner Title</string>
+    <string name="static_spinner_title">Spinner with data populated statically</string>
+    <string name="list_view_title">ListView</string>
+    <string-array name="country_list">
+        <item>Angola</item>
+        <item>Bahrain</item>
+        <item>Canada</item>
+        <item>Denmark</item>
+        <item>England</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Hungary</item>
+        <item>India</item>
+        <item>Japan</item>
+        <item>K</item>
+        <item>Liberia</item>
+        <item>Morocco</item>
+        <item>Nigeria</item>
+        <item>Poland</item>
+        <item>Russia</item>
+        <item>Sudan</item>
+        <item>Tunisia</item>
+        <item>Uruguay</item>
+        <item>Venuzuela</item>
+        <item>Western Samoa</item>
+        <item>X-mas island</item>
+        <item>Zimbabwe</item>
+    </string-array>
+    <!-- Main Activity-->
     <string-array name="index_list">
         <item>ListView basic example</item>
         <item>ListView with images</item>
+        <item>ListViews and other applications</item>
     </string-array>
     <string name="click_me_07">Tutorial 7</string>
     <string name="image_description">Continent</string>
@@ -23,4 +64,5 @@
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_activity_tutorial_7">Tutorial_7</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
 </resources>

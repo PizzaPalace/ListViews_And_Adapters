@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public class ThirdActivity extends AppCompatActivity {
 
     ListView mListView;
-
+    ArrayList<Boolean> mArrayboolean;
     ArrayAdapter mArrayAdapter;
     ArrayList<String> mArrayList;
     LayoutInflater mLayoutInflater;
@@ -32,86 +32,113 @@ public class ThirdActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_third);
 
-       setTitle("ListView basic example");
+           setTitle("ListView basic example");
 
-        mLayoutInflater = getLayoutInflater();
+            mLayoutInflater = getLayoutInflater();
 
-        // try putting this in a static ArrayList in another class
-        mArrayList = new ArrayList<String>();
-        mArrayList.add("assaam");
-        mArrayList.add("bihar");
-        mArrayList.add("Cochin");
-        mArrayList.add("Delhi");
-        mArrayList.add("Elephanta");
-        mArrayList.add("Faridabad");
-        mArrayList.add("Gaziabad");
-        mArrayList.add("Harayana");
+            // try putting this in a static ArrayList in another class
+            mArrayList = new ArrayList<String>();
+            mArrayList.add("assaam");
+            mArrayList.add("bihar");
+            mArrayList.add("Cochin");
+            mArrayList.add("Delhi");
+            mArrayList.add("Elephanta");
+            mArrayList.add("Faridabad");
+            mArrayList.add("Gaziabad");
+            mArrayList.add("Harayana");
 
-        mArrayList.add("Itanagar");
-        mArrayList.add("Jaipur");
-        mArrayList.add("Kashmir");
-        mArrayList.add("Lucknow");
-        mArrayList.add("Mumbai");
-        mArrayList.add("Nagpur");
+            mArrayList.add("Itanagar");
+            mArrayList.add("Jaipur");
+            mArrayList.add("Kashmir");
+            mArrayList.add("Lucknow");
+            mArrayList.add("Mumbai");
+            mArrayList.add("Nagpur");
 
-        mArrayList.add("Ooty");
-        mArrayList.add("Pondicheery");
-        mArrayList.add("Quaid-e-millat");
-        mArrayList.add("Raipur");
-        mArrayList.add("Shilliong");
-        mArrayList.add("Telangana");
-
-
-        mArrayList.add("Udaipur");
-        mArrayList.add("Vellore");
-        mArrayList.add("Warangal");
-        mArrayList.add("X-mas nagar");
-        mArrayList.add("Yewatmal");
-        mArrayList.add("miZoram");
-
-        mArrayList.add("0");
-        mArrayList.add("1");
-        mArrayList.add("2");
-        mArrayList.add("3");
-        mArrayList.add("4");
-        mArrayList.add("5");
+            mArrayList.add("Ooty");
+            mArrayList.add("Pondicheery");
+            mArrayList.add("Quaid-e-millat");
+            mArrayList.add("Raipur");
+            mArrayList.add("Shilliong");
+            mArrayList.add("Telangana");
 
 
-        mArrayList.add("Quaid-e-millat");
-        mArrayList.add("Raipur");
-        mArrayList.add("Shilliong");
-        mArrayList.add("Telangana");
+            mArrayList.add("Udaipur");
+            mArrayList.add("Vellore");
+            mArrayList.add("Warangal");
+            mArrayList.add("X-mas nagar");
+            mArrayList.add("Yewatmal");
+            mArrayList.add("miZoram");
+
+            mArrayList.add("0");
+            mArrayList.add("1");
+            mArrayList.add("2");
+            mArrayList.add("3");
+            mArrayList.add("4");
+            mArrayList.add("5");
 
 
-        mArrayList.add("Udaipur");
-        mArrayList.add("Vellore");
-        mArrayList.add("Warangal");
-        mArrayList.add("X-mas nagar");
-        mArrayList.add("Yewatmal");
-        mArrayList.add("miZoram");
-
-        mArrayList.add("0");
-        mArrayList.add("1");
-        mArrayList.add("2");
-        mArrayList.add("3");
-        mArrayList.add("4");
-        mArrayList.add("5");
+            mArrayList.add("Quaid-e-millat");
+            mArrayList.add("Raipur");
+            mArrayList.add("Shilliong");
+            mArrayList.add("Telangana");
 
 
-        this.mListView = (ListView) findViewById(R.id.list_view);
+            mArrayList.add("Udaipur");
+            mArrayList.add("Vellore");
+            mArrayList.add("Warangal");
+            mArrayList.add("X-mas nagar");
+            mArrayList.add("Yewatmal");
+            mArrayList.add("miZoram");
+
+            mArrayList.add("0");
+            mArrayList.add("1");
+            mArrayList.add("2");
+            mArrayList.add("3");
+            mArrayList.add("4");
+            mArrayList.add("5");
+
+          int size  =mArrayList.size();
+        mArrayboolean= new ArrayList<Boolean>();
+            this.mListView = (ListView) findViewById(R.id.list_view);
+
+        for(int i=0;i<size;i++)
+        {
+            mArrayboolean.add(false);
+        }
 
 
-        // Uncomment to use ArrayAdapter, comment MyAdapter while using this
-        //this.mArrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,android.R.id.text1,mArrayList);
-        //mListView.setAdapter(mArrayAdapter);
+            // Uncomment to use ArrayAdapter, comment MyAdapter while using this
+            //this.mArrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,android.R.id.text1,mArrayList);
+            //mListView.setAdapter(mArrayAdapter);
 
-        // Assign MyAdapter to ListView
-        myAdapter = new MyAdapter();
-        mListView.setAdapter(myAdapter);
+            // Assign MyAdapter to ListView
+            myAdapter = new MyAdapter();
+            mListView.setAdapter(myAdapter);
+            mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Log.v("String","Listitemclicked");
+                    Log.v("PARENT",parent.toString());
+                    view.setBackgroundColor(Color.BLUE);
+                    Boolean status=mArrayboolean.get(position);
+                    if (status)
+                    {
+                    mArrayboolean.set(position,false);
 
+                    }
+                    else
+                    {
+                    mArrayboolean.set(position,true);
+
+
+                    }
+
+                   myAdapter.notifyDataSetChanged();
+                }
+            });
 
     }
 
@@ -166,8 +193,22 @@ public class ThirdActivity extends AppCompatActivity {
                 convertView = mLayoutInflater.inflate(R.layout.list_element,parent,false);
             }
 
-            TextView textView = (TextView)convertView.findViewById(R.id.text_view);
+            final TextView textView = (TextView)convertView.findViewById(R.id.text_view);
             textView.setText(mArrayList.get(position));
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    textView.setTextColor(Color.RED);
+                    Log.v("TextView","textviewclicked");
+                }
+            });
+            Boolean newStatus= mArrayboolean.get(position);
+            if(newStatus==true){
+                convertView.setBackgroundColor(Color.BLUE);
+            }
+            else{
+                convertView.setBackgroundColor(Color.TRANSPARENT);
+            }
 
             return convertView;
         }

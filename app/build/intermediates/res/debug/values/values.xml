@@ -11,9 +11,44 @@
         <item>South America</item>
         <item>Antartica</item>
     </string-array>
+    <string-array name="country_list">
+        <item>Angola</item>
+        <item>Bahrain</item>
+        <item>Canada</item>
+        <item>Denmark</item>
+        <item>England</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Hungary</item>
+        <item>India</item>
+        <item>Japan</item>
+        <item>K</item>
+        <item>Liberia</item>
+        <item>Morocco</item>
+        <item>Nigeria</item>
+        <item>Poland</item>
+        <item>Russia</item>
+        <item>Sudan</item>
+        <item>Tunisia</item>
+        <item>Uruguay</item>
+        <item>Venuzuela</item>
+        <item>Western Samoa</item>
+        <item>X-mas island</item>
+        <item>Zimbabwe</item>
+    </string-array>
+    <string-array name="days_of_week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
     <string-array name="index_list">
         <item>ListView basic example</item>
         <item>ListView with images</item>
+        <item>ListViews and other applications</item>
     </string-array>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
@@ -184,6 +219,11 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="text_size">20sp</dimen>
+    <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -223,8 +263,12 @@
     <string name="click_me">Click Me</string>
     <string name="click_me_07">Tutorial 7</string>
     <string name="default_data">Continent</string>
+    <string name="dynamic_spinner_title">Dynamic Spinner Title</string>
+    <string name="edit_text_hint">Enter something here</string>
     <string name="hello_world">Hello world!</string>
     <string name="image_description">Continent</string>
+    <string name="list_view_title">ListView</string>
+    <string name="static_spinner_title">Spinner with data populated statically</string>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -232,6 +276,7 @@
     <eat-comment/>
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_third">ThirdActivity</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
     <string name="title_activity_tutorial_7">Tutorial_7</string>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>

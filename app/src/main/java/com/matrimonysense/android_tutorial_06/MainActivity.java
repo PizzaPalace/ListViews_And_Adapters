@@ -13,9 +13,11 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.com.training.android_tutorial_07.Tutorial_7Activity;
+import com.more_on_list_views.TutorialActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     ListView mListView;
     ArrayAdapter<String> mAdapter;
     ArrayList<String> mIndexList;
+    HashMap<String, Integer> mHashMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         setTitle("Index");
+        /*mHashMap =  new HashMap<String, Integer>();
+        mHashMap.put("A",1);
+        mHashMap.put("B",2);
+        mHashMap.put("C",10);
+        mHashMap.put("D",4);
+        mHashMap.put("E",8);
+
+        Log.v("Haspmap", mHashMap.toString());
+        mHashMap.put("A", 7);
+        mHashMap.put("C", 6);
+
+        Log.v("Haspmap", mHashMap.toString());
+        mHashMap.remove("D");
+        mHashMap.remove("A");
+        Log.v("Haspmap", mHashMap.toString());*/
 
         mListView = (ListView)findViewById(R.id.list_view);
         mIndexList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.index_list)));
@@ -47,10 +65,15 @@ public class MainActivity extends AppCompatActivity {
                          intent = new Intent(getApplicationContext(),ThirdActivity.class);
                          startActivity(intent);
                          break;
-                    case 1:
+                     case 1:
                          intent = new Intent(getApplicationContext(),Tutorial_7Activity.class);
-                        startActivity(intent);
+                         startActivity(intent);
                         break;
+                     case 2:
+                         intent = new Intent(getApplicationContext(), TutorialActivity.class);
+                         startActivity(intent);
+                         break;
+
                 }
 
             }

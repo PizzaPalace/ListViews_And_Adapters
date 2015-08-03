@@ -91,6 +91,7 @@ public class Tutorial_7Activity extends AppCompatActivity{
             if(convertView == null){
 
                 convertView = mInflater.inflate(R.layout.list_element_tutorial_7,parent,false);
+
             }
 
             TextView textView = (TextView)convertView.findViewById(R.id.text_view);

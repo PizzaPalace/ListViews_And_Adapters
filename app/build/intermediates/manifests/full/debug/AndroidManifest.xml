@@ -42,6 +42,10 @@
             android:name="com.com.training.android_tutorial_07.Tutorial_7Activity"
             android:label="@string/title_activity_tutorial_7" >
         </activity>
+        <activity
+            android:name="com.more_on_list_views.TutorialActivity"
+            android:label="@string/title_activity_tutorial" >
+        </activity>
     </application>
 
 </manifest>

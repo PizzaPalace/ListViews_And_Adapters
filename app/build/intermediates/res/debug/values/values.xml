@@ -263,11 +263,12 @@
     <string name="click_me">Click Me</string>
     <string name="click_me_07">Tutorial 7</string>
     <string name="default_data">Continent</string>
-    <string name="dynamic_spinner_title">Dynamic Spinner Title</string>
+    <string name="dynamic_spinner_title">Dynamic Spinner</string>
     <string name="edit_text_hint">Enter something here</string>
     <string name="hello_world">Hello world!</string>
     <string name="image_description">Continent</string>
     <string name="list_view_title">ListView</string>
+    <string name="show_as_list_view">ListView</string>
     <string name="static_spinner_title">Spinner with data populated statically</string>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>

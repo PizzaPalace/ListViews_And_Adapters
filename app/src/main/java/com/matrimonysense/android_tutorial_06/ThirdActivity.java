@@ -16,6 +16,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -117,7 +118,7 @@ public class ThirdActivity extends AppCompatActivity {
             // Assign MyAdapter to ListView
             myAdapter = new MyAdapter();
             mListView.setAdapter(myAdapter);
-            mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            /*mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Log.v("String","Listitemclicked");
@@ -133,12 +134,12 @@ public class ThirdActivity extends AppCompatActivity {
                     {
                     mArrayboolean.set(position,true);
 
-
                     }
 
                    myAdapter.notifyDataSetChanged();
                 }
-            });
+            });*/
+
 
     }
 
@@ -159,6 +160,11 @@ public class ThirdActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+        else if(id == R.id.list_settings){
+
+            Toast.makeText(this,"This is an action bar icon", Toast.LENGTH_LONG).show();
             return true;
         }
 
@@ -192,6 +198,22 @@ public class ThirdActivity extends AppCompatActivity {
 
                 convertView = mLayoutInflater.inflate(R.layout.list_element,parent,false);
             }
+
+            convertView.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    Log.v("ON CLICK","ON CLICK");
+                }
+            });
+
+            convertView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    Log.v("on long clicked","on long clicked");
+                    return true;
+                }
+            });
 
             final TextView textView = (TextView)convertView.findViewById(R.id.text_view);
             textView.setText(mArrayList.get(position));

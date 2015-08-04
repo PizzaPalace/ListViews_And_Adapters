@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                      case 2:
                          intent = new Intent(getApplicationContext(), TutorialActivity.class);
+                         intent.putExtra("total",10);
                          startActivity(intent);
                          break;
 
@@ -93,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
         //Integer sampleInteger = 100;
         //String output2 = getGenericElement(sampleInteger,stringArray);
 
-        int[] x = {1,2,3,4};
-        int[] y = {1,2,3,4};
+        //int[] x = {1,2,3,4};
+        //int[] y = {1,2,3,4};
 
         // comaparing arrays using == operator
         /*if(x == x){
@@ -117,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
         }*/
 
         /***********************************************************/
-        Integer[] sampleIntegerArray = {23,45,67,89,23,56};
-        Animals[] animals = {new Animals(), new Animals(), new Animals(), new Animals()};
+        //Integer[] sampleIntegerArray = {23,45,67,89,23,56};
+        //Animals[] animals = {new Animals(), new Animals(), new Animals(), new Animals()};
 
         // returns unique hashcode of each object, isn't always guaranteed to be unique
         /*for(Animals animal : animals){
@@ -129,12 +130,12 @@ public class MainActivity extends AppCompatActivity {
         // check equality when same object array is passed as arguments,will be equal
         //getGenericElements(sampleIntegerArray, sampleIntegerArray);
 
-        Integer[] outputArray = getGenericElements(sampleIntegerArray,animals);
+        //Integer[] outputArray = getGenericElements(sampleIntegerArray,animals);
         //Log.v("OUTPUT ARRAY", outputArray.toString());
         //Log.v("ORIGNAL ARRAY", sampleIntegerArray.toString());
 
         // initialize array of ints, manipulating arrays inside functions
-        int[] arrayOfInts = new int[10];
+        /*int[] arrayOfInts = new int[10];
         int size = arrayOfInts.length;
 
         // assign values to arrays
@@ -148,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
         int[] outputIntArray = manipulateArray(arrayOfInts);
 
         Log.v("OUTPUT ARRAY",printArray(outputIntArray));
-        Log.v("INPUT ARRAY AFTER",printArray(arrayOfInts));
+        Log.v("INPUT ARRAY AFTER",printArray(arrayOfInts));*/
 
     }
 

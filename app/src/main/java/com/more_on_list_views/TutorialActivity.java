@@ -1,6 +1,8 @@
 package com.more_on_list_views;
 
 import android.app.ListActivity;
+import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -20,6 +23,8 @@ import com.matrimonysense.android_tutorial_06.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 public class TutorialActivity extends ListActivity {
 
@@ -30,6 +35,7 @@ public class TutorialActivity extends ListActivity {
     SpinnerAdapter mSpinnerAdapter;
     ArrayList<String> mSpinnerList;
     EditText mEditText;
+    DrawerLayout mDrawerLayout;
 
 
     @Override
@@ -37,7 +43,12 @@ public class TutorialActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
         // Initialize the ListView and assign adapter
+
+        Intent intent = getIntent();
+        int x = intent.getIntExtra("total",-1);
+
         mListView = getListView();
+
         mArrayList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.country_list)));
         mArrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,mArrayList);
         mListView.setAdapter(mArrayAdapter);
@@ -48,6 +59,48 @@ public class TutorialActivity extends ListActivity {
         mSpinnerList.addAll(mSpinnerList);
         mSpinnerAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,mSpinnerList);
         mDyanamicSpinner.setAdapter(mSpinnerAdapter);
+
+        mDyanamicSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                Log.v("item selected", mSpinnerList.get(position).toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+                Log.v("nothing","nothing");
+            }
+        });
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
+            @Override
+            public void onDrawerSlide(View view, float v) {
+
+                Log.v("ON SLIDE",view.toString());
+                Log.v("FLOAT OFFSET",Float.toString(v));
+            }
+
+            @Override
+            public void onDrawerOpened(View view) {
+
+                Log.v("ON OPENED",view.toString());
+            }
+
+            @Override
+            public void onDrawerClosed(View view) {
+
+                Log.v("ON CLOSED",view.toString());
+            }
+
+            @Override
+            public void onDrawerStateChanged(int i) {
+
+                Log.v("ON STATE CHANGED",Integer.toString(i));
+            }
+        });
 
         mEditText = (EditText)findViewById(R.id.edit_text);
         mEditText.addTextChangedListener(new TextWatcher(){
@@ -67,17 +120,18 @@ public class TutorialActivity extends ListActivity {
 
                 // Enter your code here
                 String text = mEditText.getText().toString();
+                Log.v("TEXT",text);
 
                 // perform filtering operation here
-
 
                 // to be called after you have manipulated your data
                 //mArrayAdapter.notifyDataSetChanged();
 
             }
         });
-    }
 
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -100,6 +154,5 @@ public class TutorialActivity extends ListActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 
 }

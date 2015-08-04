@@ -1,4 +1,5 @@
 <resources>
+    <string name="show_as_list_view">ListView</string>
     <!-- TutorialsActivity -->
     <string name="edit_text_hint">Enter something here</string>
     <string-array name="days_of_week">
@@ -10,7 +11,7 @@
         <item>Saturday</item>
         <item>Sunday</item>
     </string-array>
-    <string name="dynamic_spinner_title">Dynamic Spinner Title</string>
+    <string name="dynamic_spinner_title">Dynamic Spinner</string>
     <string name="static_spinner_title">Spinner with data populated statically</string>
     <string name="list_view_title">ListView</string>
     <string-array name="country_list">

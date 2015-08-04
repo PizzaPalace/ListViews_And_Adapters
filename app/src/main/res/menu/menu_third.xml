@@ -2,6 +2,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.matrimonysense.android_tutorial_06.ThirdActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/list_settings"
+        android:title="@string/show_as_list_view"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+
+        android:icon="@drawable/ic_action_view_as_list"
+        />
+
 </menu>

@@ -4,5 +4,13 @@
     tools:context="com.com.training.android_tutorial_07.Tutorial_7Activity">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+
+    <item
+        android:id="@+id/list_settings"
+        android:title="@string/show_as_list_view"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_view_as_list"
+        />
 </menu>
 <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/menu/menu_tutorial_7.xml -->

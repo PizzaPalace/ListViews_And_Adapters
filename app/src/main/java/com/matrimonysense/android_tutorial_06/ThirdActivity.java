@@ -198,7 +198,7 @@ public class ThirdActivity extends AppCompatActivity {
 
                 convertView = mLayoutInflater.inflate(R.layout.list_element,parent,false);
             }
-
+            // setOnClickListener
             convertView.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -206,7 +206,7 @@ public class ThirdActivity extends AppCompatActivity {
                     Log.v("ON CLICK","ON CLICK");
                 }
             });
-
+            // setOnLongClickListener
             convertView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {

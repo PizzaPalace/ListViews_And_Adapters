@@ -59,7 +59,7 @@ public class TutorialActivity extends ListActivity {
         mSpinnerList.addAll(mSpinnerList);
         mSpinnerAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,mSpinnerList);
         mDyanamicSpinner.setAdapter(mSpinnerAdapter);
-
+        // setOnItemSelectedListener for Spinners
         mDyanamicSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -75,6 +75,7 @@ public class TutorialActivity extends ListActivity {
         });
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        // setDrawerListener for DrawerLayout
         mDrawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
             public void onDrawerSlide(View view, float v) {
@@ -102,6 +103,7 @@ public class TutorialActivity extends ListActivity {
             }
         });
 
+        // addTextChangedListener for EditText
         mEditText = (EditText)findViewById(R.id.edit_text);
         mEditText.addTextChangedListener(new TextWatcher(){
 
@@ -129,8 +131,6 @@ public class TutorialActivity extends ListActivity {
 
             }
         });
-
-
     }
 
     @Override

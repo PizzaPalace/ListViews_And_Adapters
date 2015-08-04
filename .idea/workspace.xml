@@ -72,8 +72,8 @@
       <file leaf-file-name="TutorialActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/more_on_list_views/TutorialActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3410" max-vertical-offset="4100">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3453" max-vertical-offset="4100">
+              <caret line="157" column="1" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,8 +140,8 @@
       <file leaf-file-name="ThirdActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matrimonysense/android_tutorial_06/ThirdActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2285192" vertical-offset="4500" max-vertical-offset="5650">
-              <caret line="203" column="14" selection-start-line="203" selection-start-column="14" selection-end-line="203" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.09140768" vertical-offset="4500" max-vertical-offset="5650">
+              <caret line="200" column="33" selection-start-line="200" selection-start-column="33" selection-end-line="200" selection-end-column="33" />
               <folding>
                 <element signature="e#5561#5562#0" expanded="true" />
                 <element signature="e#5609#5610#0" expanded="true" />
@@ -149,11 +149,12 @@
                 <element signature="e#5709#5710#0" expanded="true" />
                 <element signature="e#5774#5775#0" expanded="true" />
                 <element signature="e#5806#5807#0" expanded="true" />
-                <element signature="e#6321#6322#0" expanded="true" />
-                <element signature="e#6387#6627#0" expanded="true" />
-                <element signature="e#6612#6613#0" expanded="true" />
-                <element signature="e#6817#7060#0" expanded="true" />
-                <element signature="e#7045#7046#0" expanded="true" />
+                <element signature="e#6186#6369#0" expanded="true" />
+                <element signature="e#6354#6355#0" expanded="true" />
+                <element signature="e#6457#6697#0" expanded="true" />
+                <element signature="e#6682#6683#0" expanded="true" />
+                <element signature="e#6887#7130#0" expanded="true" />
+                <element signature="e#7115#7116#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1796,7 +1797,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1882,11 +1883,12 @@
             <element signature="e#5709#5710#0" expanded="true" />
             <element signature="e#5774#5775#0" expanded="true" />
             <element signature="e#5806#5807#0" expanded="true" />
-            <element signature="e#6321#6322#0" expanded="true" />
-            <element signature="e#6387#6627#0" expanded="true" />
-            <element signature="e#6612#6613#0" expanded="true" />
-            <element signature="e#6817#7060#0" expanded="true" />
-            <element signature="e#7045#7046#0" expanded="true" />
+            <element signature="e#6186#6369#0" expanded="true" />
+            <element signature="e#6354#6355#0" expanded="true" />
+            <element signature="e#6457#6697#0" expanded="true" />
+            <element signature="e#6682#6683#0" expanded="true" />
+            <element signature="e#6887#7130#0" expanded="true" />
+            <element signature="e#7115#7116#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1956,11 +1958,12 @@
             <element signature="e#5709#5710#0" expanded="true" />
             <element signature="e#5774#5775#0" expanded="true" />
             <element signature="e#5806#5807#0" expanded="true" />
-            <element signature="e#6321#6322#0" expanded="true" />
-            <element signature="e#6387#6627#0" expanded="true" />
-            <element signature="e#6612#6613#0" expanded="true" />
-            <element signature="e#6817#7060#0" expanded="true" />
-            <element signature="e#7045#7046#0" expanded="true" />
+            <element signature="e#6186#6369#0" expanded="true" />
+            <element signature="e#6354#6355#0" expanded="true" />
+            <element signature="e#6457#6697#0" expanded="true" />
+            <element signature="e#6682#6683#0" expanded="true" />
+            <element signature="e#6887#7130#0" expanded="true" />
+            <element signature="e#7115#7116#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2290,16 +2293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/more_on_list_views/TutorialActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3410" max-vertical-offset="4100">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matrimonysense/android_tutorial_06/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="5450">
@@ -2308,10 +2301,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/more_on_list_views/TutorialActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3453" max-vertical-offset="4100">
+          <caret line="157" column="1" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/matrimonysense/android_tutorial_06/ThirdActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2285192" vertical-offset="4500" max-vertical-offset="5650">
-          <caret line="203" column="14" selection-start-line="203" selection-start-column="14" selection-end-line="203" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.09140768" vertical-offset="4500" max-vertical-offset="5650">
+          <caret line="200" column="33" selection-start-line="200" selection-start-column="33" selection-end-line="200" selection-end-column="33" />
           <folding>
             <element signature="e#5561#5562#0" expanded="true" />
             <element signature="e#5609#5610#0" expanded="true" />
@@ -2319,11 +2322,12 @@
             <element signature="e#5709#5710#0" expanded="true" />
             <element signature="e#5774#5775#0" expanded="true" />
             <element signature="e#5806#5807#0" expanded="true" />
-            <element signature="e#6321#6322#0" expanded="true" />
-            <element signature="e#6387#6627#0" expanded="true" />
-            <element signature="e#6612#6613#0" expanded="true" />
-            <element signature="e#6817#7060#0" expanded="true" />
-            <element signature="e#7045#7046#0" expanded="true" />
+            <element signature="e#6186#6369#0" expanded="true" />
+            <element signature="e#6354#6355#0" expanded="true" />
+            <element signature="e#6457#6697#0" expanded="true" />
+            <element signature="e#6682#6683#0" expanded="true" />
+            <element signature="e#6887#7130#0" expanded="true" />
+            <element signature="e#7115#7116#0" expanded="true" />
           </folding>
         </state>
       </provider>

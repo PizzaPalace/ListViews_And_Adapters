@@ -1,5 +1,32 @@
 <resources>
+
+    <!-- Bowler names for horizontal scroll view -->
+    <string name="zaheer">Zaheer</string>
+    <string name="bhajji">Bhajji</string>
+    <string name="ashwin">Ashwin</string>
+    <string name="ishant">Ishant</string>
+    <string name="bhuvaneshwar">Bhuvaneshwar</string>
+
+    <!-- For static fragments -->
+    <string name="static_fragment_one">First Fragment</string>
+    <string name="static_fragment_two">Second Fragment</string>
+    <string name="static_fragment_three">Third Fragment</string>
+
+    <!-- Fragment Tags -->
+    <string name="static_fragment_1">STATIC_FRAGMENT_1_TAG</string>
+    <string name="static_fragment_2">STATIC_FRAGMENT_2_TAG</string>
+    <string name="static_fragment_3">STATIC_FRAGMENT_3_TAG</string>
+
+    <string name="combined">Combined Scroll</string>
+    <string name="vertical">Vertical Scroll</string>
+    <string name="horizontal">Horizontal Scroll</string>
+    <string name="batsmen_selection">India usually has a stronger batting line-up for its teams.</string>
+    <string name="bowling_selection">India\'s pace bowling attack has seen ups and downs.</string>
+    <string name="end_of_scroll_view">Thanks for scrolling !</string>
+    <string name="batsmen">Vertical Scroll View Example</string>
+    <string name="bowlers">Horizontal Scroll View Example</string>
     <string name="show_as_list_view">ListView</string>
+
     <!-- TutorialsActivity -->
     <string name="edit_text_hint">Enter something here</string>
     <string-array name="days_of_week">
@@ -44,6 +71,8 @@
         <item>ListView basic example</item>
         <item>ListView with images</item>
         <item>ListViews and other applications</item>
+        <item>Fragments and ScrollViews</item>
+        <!--<item>Making network requests</item>-->
     </string-array>
     <string name="click_me_07">Tutorial 7</string>
     <string name="image_description">Continent</string>
@@ -66,4 +95,11 @@
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_activity_tutorial_7">Tutorial_7</string>
     <string name="title_activity_tutorial">TutorialActivity</string>
+    <string name="title_activity_horizontal_scroll">HorizontalScrollActivity</string>
+    <string name="title_activity_scroll">ScrollActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_network">NetworkActivity</string>
+    <string name="title_activity_json">JSONActivity</string>
 </resources>

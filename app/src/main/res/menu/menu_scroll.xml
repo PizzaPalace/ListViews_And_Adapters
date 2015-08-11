@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.scrollableviewsandfragments.ScrollActivity">
+
+
+
+    <item android:id="@+id/action_vertical_scroll"
+        android:title="@string/vertical"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_horizontal_scroll"
+        android:title="@string/horizontal"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_combined_scroll"
+        android:title="@string/combined"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>

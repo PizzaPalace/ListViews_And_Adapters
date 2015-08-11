@@ -8,6 +8,9 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="21" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -45,6 +48,24 @@
         <activity
             android:name="com.more_on_list_views.TutorialActivity"
             android:label="@string/title_activity_tutorial" >
+        </activity>
+        <activity
+            android:name="com.scrollableviewsandfragments.ScrollActivity"
+            android:label="@string/title_activity_scroll" >
+        </activity>
+
+        <service
+            android:name="com.networking.HTTPService"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name="com.networking.NetworkActivity"
+            android:label="@string/title_activity_network" >
+        </activity>
+        <activity
+            android:name="com.json.JSONActivity"
+            android:label="@string/title_activity_json" >
         </activity>
     </application>
 

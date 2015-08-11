@@ -1,0 +1,69 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.scrollableviewsandfragments.VerticalScrollFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/batsmen"
+                android:textSize="@dimen/title_size"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/image_sachin"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/sachin"
+                android:layout_gravity="center_horizontal"
+            />
+
+            <ImageView
+                android:id="@+id/image_dravid"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/dravid"
+                android:layout_gravity="center_horizontal"
+            />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/batsmen_selection"
+                android:textSize="@dimen/text_size"
+                android:textStyle="italic"
+                android:layout_gravity="center_horizontal"/>
+
+            <ImageView
+                android:id="@+id/image_rahane"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/rahane"
+                android:layout_gravity="center_horizontal"
+            />
+
+            <ImageView
+                android:id="@+id/image_sehwag"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/sehwag"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

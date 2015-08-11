@@ -86,7 +86,6 @@ public class ThirdActivity extends AppCompatActivity {
             mArrayList.add("Shilliong");
             mArrayList.add("Telangana");
 
-
             mArrayList.add("Udaipur");
             mArrayList.add("Vellore");
             mArrayList.add("Warangal");

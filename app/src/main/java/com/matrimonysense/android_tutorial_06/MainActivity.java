@@ -9,11 +9,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 
 import com.com.training.android_tutorial_07.Tutorial_7Activity;
 import com.more_on_list_views.TutorialActivity;
+import com.networking.NetworkActivity;
+import com.scrollableviewsandfragments.ScrollActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -74,6 +75,15 @@ public class MainActivity extends AppCompatActivity {
                          intent.putExtra("total",10);
                          startActivity(intent);
                          break;
+                    case 3:
+                        intent = new Intent(getApplicationContext(), ScrollActivity.class);
+                        startActivity(intent);
+                        break;
+                    /*case 4:
+                        intent = new Intent(getApplicationContext(), NetworkActivity.class);
+                        startActivity(intent);
+                        break;*/
+
 
                 }
 

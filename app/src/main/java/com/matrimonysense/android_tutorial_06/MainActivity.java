@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.com.training.android_tutorial_07.Tutorial_7Activity;
+import com.json.JSONActivity;
 import com.more_on_list_views.TutorialActivity;
 import com.networking.NetworkActivity;
 import com.savingstate.SavedStateActivity;
@@ -80,12 +81,16 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), ScrollActivity.class);
                         startActivity(intent);
                         break;
-                    /*case 4:
-                        intent = new Intent(getApplicationContext(), NetworkActivity.class);
-                        startActivity(intent);
-                        break;*/
                     case 4:
                         intent = new Intent(getApplicationContext(),SavedStateActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent = new Intent(getApplicationContext(),JSONActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        intent = new Intent(getApplicationContext(),NetworkActivity.class);
                         startActivity(intent);
                         break;
                 }

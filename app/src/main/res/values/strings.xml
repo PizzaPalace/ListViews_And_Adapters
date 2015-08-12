@@ -84,8 +84,9 @@
         <item>ListView with images</item>
         <item>ListViews and other applications</item>
         <item>Fragments and ScrollViews</item>
-        <!--<item>Making network requests</item>-->
         <item>Saving State</item>
+        <item>JSON</item>
+        <item>Making network requests</item>
     </string-array>
     <string name="click_me_07">Tutorial 7</string>
     <string name="image_description">Continent</string>

@@ -139,13 +139,13 @@ public class HTTPService extends IntentService {
 
                 Log.d("Result", result);
 
-                jsonParser(result);
+                ArrayList<String> resultList = jsonParser(result);
 
-                //Intent broadcastIntent = new Intent();
-                //broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
-                //broadcastIntent.setAction(NetworkActivity.Receiver.RECEIVER_KEY);
-                //broadcastIntent.putExtra(KEY,jsonReader(result));
-                //sendBroadcast(broadcastIntent);
+                Intent broadcastIntent = new Intent();
+                broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
+                broadcastIntent.setAction(NetworkActivity.Receiver.RECEIVER_KEY);
+                broadcastIntent.putStringArrayListExtra(KEY,resultList/*jsonReader(result)*/);
+                sendBroadcast(broadcastIntent);
             }
         }
         catch(MalformedURLException exception){
@@ -231,7 +231,7 @@ public class HTTPService extends IntentService {
         return mList;
     }
 
-    private void jsonParser(String result) throws JSONException{
+    private ArrayList<String> jsonParser(String result) throws JSONException{
 
         ArrayList<String> urlList = new ArrayList<String>();
 
@@ -261,5 +261,7 @@ public class HTTPService extends IntentService {
         }
 
         Log.v("URLList",urlList.toString());
+
+        return urlList;
     }
 }

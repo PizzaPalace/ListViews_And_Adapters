@@ -1,0 +1,21 @@
+{
+  "array": [
+    {
+      "name":"rajesh",
+      "height":168
+    },
+    {
+      "name":"meera",
+      "height":154
+    },
+    {
+      "name":"shyam",
+      "height":160
+    },
+    {
+      "name":"radha",
+      "height":168
+    }
+  ]
+ 
+}

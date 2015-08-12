@@ -25,11 +25,16 @@ public class ScrollActivity extends AppCompatActivity
                                        CombinedFragment.OnCombinedFragmentInteractionListener{
 
     ArrayList<String> mFragmentTagList;
+    String mSampleStringToStore;
+    // Key to pass to savedInstanceState
+    private static final String KEY = "SAVED_INSTANCE_STATE_KEY";
 
+    // tags for fragments created dynamically
     private static final String VERTICAL_SCROLL_TAG = "VERTICAL_SCROLL_TAG";
     private static final String HORIZONTAL_SCROLL_TAG = "HORIZONTAL_SCROLL_TAG";
     private static final String COMBINED_SCROLL_TAG = "COMBINED_SCROLL_TAG";
 
+    // tags for static fragments
     private String STATIC_FRAGMENT_1_TAG;
     private String STATIC_FRAGMENT_2_TAG;
     private String STATIC_FRAGMENT_3_TAG;
@@ -40,6 +45,8 @@ public class ScrollActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scroll);
         Log.v("ON CREATE ACTIVITY","ON CREATE ACTIVITY");
+
+        mSampleStringToStore = "This is a sample string to store";
 
         // gets tags of static Fragments from resources
         STATIC_FRAGMENT_1_TAG = getResources().getString(R.string.static_fragment_1);
@@ -117,12 +124,20 @@ public class ScrollActivity extends AppCompatActivity
         if(id == R.id.action_horizontal_scroll){
 
             clearAllFragments();
+
+
             HorizontalScrollFragment fragment = HorizontalScrollFragment.newInstance("Sample String 1","Sample String 2");
+
             FragmentManager manager = getSupportFragmentManager();
+
             FragmentTransaction transaction = manager.beginTransaction();
+
             transaction.add(R.id.scroll_container,fragment,HORIZONTAL_SCROLL_TAG);
+
             transaction.commit();
+
             mFragmentTagList.add(HORIZONTAL_SCROLL_TAG);
+
             return true;
         }
         else if(id == R.id.action_vertical_scroll){
@@ -150,14 +165,17 @@ public class ScrollActivity extends AppCompatActivity
         while(iterator.hasNext()){
 
             String tag = iterator.next();
+
             FragmentManager manager = getSupportFragmentManager();
+
             Fragment fragment = manager.findFragmentByTag(tag);
             // check if returned fragment exists
+
             if(fragment != null){
 
                 FragmentTransaction transaction = manager.beginTransaction();
                 transaction.remove(fragment);
-                transaction.commit();
+                //transaction.commit();
             }
             // remove tag from arraylist
             iterator.remove();
@@ -271,7 +289,7 @@ public class ScrollActivity extends AppCompatActivity
         @Override
         public void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
-            Log.v("ON CREATE B","STATIC FRAGMENT B CREATED");
+            //Log.v("ON CREATE B","STATIC FRAGMENT B CREATED");
         }
 
         @Override
@@ -289,7 +307,7 @@ public class ScrollActivity extends AppCompatActivity
         @Override
         public void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
-            Log.v("ON CREATE C","STATIC FRAGMENT C CREATED");
+            //Log.v("ON CREATE C","STATIC FRAGMENT C CREATED");
         }
 
         @Override
@@ -301,7 +319,7 @@ public class ScrollActivity extends AppCompatActivity
 
     }
 
-  
+
 
 
 }

@@ -67,6 +67,10 @@
             android:name="com.json.JSONActivity"
             android:label="@string/title_activity_json" >
         </activity>
+        <activity
+            android:name="com.savingstate.SavedStateActivity"
+            android:label="@string/title_activity_saved_state" >
+        </activity>
     </application>
 
 </manifest>

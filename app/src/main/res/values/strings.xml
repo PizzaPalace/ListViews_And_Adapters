@@ -1,4 +1,15 @@
 <resources>
+    <!-- sample values of text views -->
+    <string name="sample_name">Sample Name</string>
+    <string name="sample_fav_color">Sample Color</string>
+    <string name="sample_number">Sample Number</string>
+    <string name="sample_mothertongue">Sample Mother Tongue</string>
+
+    <!-- hints for edit texts used in activity_saved_state -->
+    <string name="name">Enter your name</string>
+    <string name="number">Enter you number</string>
+    <string name="fav_color">Enter your favourite color</string>
+    <string name="mothertongue">Enter your mother tongue</string>
 
     <!-- Bowler names for horizontal scroll view -->
     <string name="zaheer">Zaheer</string>
@@ -73,6 +84,7 @@
         <item>ListViews and other applications</item>
         <item>Fragments and ScrollViews</item>
         <!--<item>Making network requests</item>-->
+        <item>Saving State</item>
     </string-array>
     <string name="click_me_07">Tutorial 7</string>
     <string name="image_description">Continent</string>
@@ -102,4 +114,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_network">NetworkActivity</string>
     <string name="title_activity_json">JSONActivity</string>
+    <string name="title_activity_saved_state">SavedStateActivity</string>
 </resources>

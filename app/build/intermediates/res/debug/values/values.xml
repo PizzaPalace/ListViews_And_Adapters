@@ -51,6 +51,7 @@
         <item>ListViews and other applications</item>
         <item>Fragments and ScrollViews</item>
         <!--<item>Making network requests</item>-->
+        <item>Saving State</item>
     </string-array>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
@@ -277,12 +278,20 @@
     <string name="dynamic_spinner_title">Dynamic Spinner</string>
     <string name="edit_text_hint">Enter something here</string>
     <string name="end_of_scroll_view">Thanks for scrolling !</string>
+    <string name="fav_color">Enter your favourite color</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
     <string name="horizontal">Horizontal Scroll</string>
     <string name="image_description">Continent</string>
     <string name="ishant">Ishant</string>
     <string name="list_view_title">ListView</string>
+    <string name="mothertongue">Enter your mother tongue</string>
+    <string name="name">Enter your name</string>
+    <string name="number">Enter you number</string>
+    <string name="sample_fav_color">Sample Color</string>
+    <string name="sample_mothertongue">Sample Mother Tongue</string>
+    <string name="sample_name">Sample Name</string>
+    <string name="sample_number">Sample Number</string>
     <string name="show_as_list_view">ListView</string>
     <string name="static_fragment_1">STATIC_FRAGMENT_1_TAG</string>
     <string name="static_fragment_2">STATIC_FRAGMENT_2_TAG</string>
@@ -299,6 +308,7 @@
     <string name="title_activity_horizontal_scroll">HorizontalScrollActivity</string>
     <string name="title_activity_json">JSONActivity</string>
     <string name="title_activity_network">NetworkActivity</string>
+    <string name="title_activity_saved_state">SavedStateActivity</string>
     <string name="title_activity_scroll">ScrollActivity</string>
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_third">ThirdActivity</string>

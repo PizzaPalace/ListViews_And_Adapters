@@ -14,6 +14,7 @@ import android.widget.ListView;
 import com.com.training.android_tutorial_07.Tutorial_7Activity;
 import com.more_on_list_views.TutorialActivity;
 import com.networking.NetworkActivity;
+import com.savingstate.SavedStateActivity;
 import com.scrollableviewsandfragments.ScrollActivity;
 
 import java.util.ArrayList;
@@ -83,8 +84,10 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), NetworkActivity.class);
                         startActivity(intent);
                         break;*/
-
-
+                    case 4:
+                        intent = new Intent(getApplicationContext(),SavedStateActivity.class);
+                        startActivity(intent);
+                        break;
                 }
 
             }

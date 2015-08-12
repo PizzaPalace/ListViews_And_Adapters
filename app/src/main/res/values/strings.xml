@@ -28,6 +28,7 @@
     <string name="static_fragment_2">STATIC_FRAGMENT_2_TAG</string>
     <string name="static_fragment_3">STATIC_FRAGMENT_3_TAG</string>
 
+    <string name="pager">Pager</string>
     <string name="combined">Combined Scroll</string>
     <string name="vertical">Vertical Scroll</string>
     <string name="horizontal">Horizontal Scroll</string>
@@ -115,4 +116,5 @@
     <string name="title_activity_network">NetworkActivity</string>
     <string name="title_activity_json">JSONActivity</string>
     <string name="title_activity_saved_state">SavedStateActivity</string>
+    <string name="title_activity_swipe">SwipeActivity</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.scrollableviewsandfragments;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.matrimonysense.android_tutorial_06.R;
 
@@ -22,7 +25,8 @@ import java.util.Iterator;
 public class ScrollActivity extends AppCompatActivity
                             implements VerticalScrollFragment.OnVerticalFragmentInteractionListener,
                                        HorizontalScrollFragment.OnHorizontalFragmentInteractionListener,
-                                       CombinedFragment.OnCombinedFragmentInteractionListener{
+                                       CombinedFragment.OnCombinedFragmentInteractionListener
+                               {
 
     ArrayList<String> mFragmentTagList;
     String mSampleStringToStore;
@@ -38,6 +42,8 @@ public class ScrollActivity extends AppCompatActivity
     private String STATIC_FRAGMENT_1_TAG;
     private String STATIC_FRAGMENT_2_TAG;
     private String STATIC_FRAGMENT_3_TAG;
+
+    TextView mTextView;
 
 
     @Override
@@ -64,6 +70,7 @@ public class ScrollActivity extends AppCompatActivity
         mFragmentTagList.add(STATIC_FRAGMENT_2_TAG/*getResources().getString(R.string.static_fragment_2)*/);
         mFragmentTagList.add(STATIC_FRAGMENT_3_TAG/*getResources().getString(R.string.static_fragment_3)*/);
 
+        mTextView = (TextView) findViewById(R.id.text_view);
     }
 
     @Override
@@ -156,6 +163,13 @@ public class ScrollActivity extends AppCompatActivity
 
             return true;
         }
+
+        else if(id == R.id.action_pager){
+
+            Intent intent = new Intent(this,SwipeActivity.class);
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -199,11 +213,19 @@ public class ScrollActivity extends AppCompatActivity
 
     }
 
+    @Override
+    public void changeMethod(String string) {
+
+        Log.v("Changed text",string);
+    }
+
     // Overriden method from VericalScrollFragment's Interface
     @Override
     public void onVerticalFragmentInteraction(Uri uri) {
 
     }
+
+
 
     /*
     Fragment declarations begin here
@@ -286,6 +308,11 @@ public class ScrollActivity extends AppCompatActivity
 
     public static class StaticFragment2 extends Fragment{
 
+        public interface StaticFragment2Listener{
+
+            public void changeText(String text);
+        }
+
         @Override
         public void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
@@ -297,7 +324,21 @@ public class ScrollActivity extends AppCompatActivity
                                  Bundle savedInstanceState){
 
 
-            return inflater.inflate(R.layout.fragment_static_2,container,false);
+            View view = inflater.inflate(R.layout.fragment_static_2,container,false);
+            Button button = (Button)view.findViewById(R.id.button);
+            final TextView textView = (TextView)view.findViewById(R.id.text_view);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    textView.setText("Changed Text");
+
+                    TextView textView = (TextView)getActivity().findViewById(R.id.text_view);
+                    textView.setText("manipulated text");
+                }
+            });
+
+            return view;
         }
 
     }

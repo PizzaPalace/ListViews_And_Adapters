@@ -19,4 +19,9 @@
         android:title="@string/combined"
         android:orderInCategory="100"
         app:showAsAction="never" />
+
+    <item android:id="@+id/action_pager"
+        android:title="@string/pager"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
 </menu>

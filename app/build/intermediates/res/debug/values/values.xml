@@ -288,6 +288,7 @@
     <string name="mothertongue">Enter your mother tongue</string>
     <string name="name">Enter your name</string>
     <string name="number">Enter you number</string>
+    <string name="pager">Pager</string>
     <string name="sample_fav_color">Sample Color</string>
     <string name="sample_mothertongue">Sample Mother Tongue</string>
     <string name="sample_name">Sample Name</string>
@@ -311,6 +312,7 @@
     <string name="title_activity_saved_state">SavedStateActivity</string>
     <string name="title_activity_scroll">ScrollActivity</string>
     <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_swipe">SwipeActivity</string>
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_activity_tutorial">TutorialActivity</string>
     <string name="title_activity_tutorial_7">Tutorial_7</string>

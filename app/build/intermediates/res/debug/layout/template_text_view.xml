@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:text="@string/static_fragment_three"
+android:textStyle="bold"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textSize="@dimen/text_size"
+android:layout_gravity="center"/><!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/layout/template_text_view.xml -->

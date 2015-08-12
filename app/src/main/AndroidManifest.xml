@@ -65,6 +65,10 @@
             android:name="com.savingstate.SavedStateActivity"
             android:label="@string/title_activity_saved_state" >
         </activity>
+        <activity
+            android:name="com.scrollableviewsandfragments.SwipeActivity"
+            android:label="@string/title_activity_swipe" >
+        </activity>
     </application>
 
 </manifest>

@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.matrimonysense.android_tutorial_06.R;
 
@@ -28,6 +30,11 @@ public class HorizontalScrollFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    Button mButton;
+    TextView mTitleText;
+
+
 
     private OnHorizontalFragmentInteractionListener mListener;
 
@@ -66,7 +73,20 @@ public class HorizontalScrollFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_horizontal_scroll, container, false);
+
+
+        View view =  inflater.inflate(R.layout.fragment_horizontal_scroll, container, false);
+        mTitleText = (TextView)view.findViewById(R.id.title);
+        mButton = (Button)view.findViewById(R.id.button);
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               mListener.changeMethod("random text");
+               mTitleText.setText("ChangedTitle");
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -106,6 +126,7 @@ public class HorizontalScrollFragment extends Fragment {
     public interface OnHorizontalFragmentInteractionListener {
         // TODO: Update argument type and name
         public void onHorizontalFragmentInteraction(Uri uri);
+        public void changeMethod(String string);
     }
 
 }

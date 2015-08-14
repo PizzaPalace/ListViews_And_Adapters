@@ -141,6 +141,8 @@ public class ScrollActivity extends AppCompatActivity
 
             transaction.add(R.id.scroll_container,fragment,HORIZONTAL_SCROLL_TAG);
 
+            //transaction.addToBackStack(null);
+
             transaction.commit();
 
             mFragmentTagList.add(HORIZONTAL_SCROLL_TAG);
@@ -154,6 +156,7 @@ public class ScrollActivity extends AppCompatActivity
             FragmentManager manager = getSupportFragmentManager();
             FragmentTransaction transaction = manager.beginTransaction();
             transaction.add(R.id.scroll_container,fragment,VERTICAL_SCROLL_TAG);
+            //transaction.addToBackStack(null);
             transaction.commit();
             mFragmentTagList.add(VERTICAL_SCROLL_TAG);
 
@@ -189,7 +192,7 @@ public class ScrollActivity extends AppCompatActivity
 
                 FragmentTransaction transaction = manager.beginTransaction();
                 transaction.remove(fragment);
-                //transaction.commit();
+                transaction.commit();
             }
             // remove tag from arraylist
             iterator.remove();

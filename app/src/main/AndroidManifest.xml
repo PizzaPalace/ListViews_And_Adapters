@@ -59,7 +59,11 @@
         </activity>
         <activity
             android:name="com.json.JSONActivity"
-            android:label="@string/title_activity_json" >
+            android:label="@string/title_activity_json"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.matrimonysense.android_tutorial_06.MainActivity" />
         </activity>
         <activity
             android:name="com.savingstate.SavedStateActivity"

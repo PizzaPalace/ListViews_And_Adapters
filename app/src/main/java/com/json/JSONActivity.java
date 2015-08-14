@@ -1,5 +1,7 @@
 package com.json;
 
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,10 +26,16 @@ import java.util.Iterator;
 
 public class JSONActivity extends AppCompatActivity {
 
+    ActionBar mActionBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_json);
+
+        mActionBar = getSupportActionBar();
+        mActionBar.setHomeButtonEnabled(true);
+        mActionBar.setDisplayHomeAsUpEnabled(true);
 
         String output1 = getJSON(R.raw.json_1);
 
@@ -38,6 +46,8 @@ public class JSONActivity extends AppCompatActivity {
         processOutput3(output3);
 
         String output4 = getJSON(R.raw.name_height);
+
+
     }
 
 
@@ -57,6 +67,12 @@ public class JSONActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+
+        else if(id == android.R.id.home){
+
+            NavUtils.navigateUpFromSameTask(this);
             return true;
         }
 

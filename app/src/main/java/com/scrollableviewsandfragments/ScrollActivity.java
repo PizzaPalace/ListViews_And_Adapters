@@ -141,7 +141,7 @@ public class ScrollActivity extends AppCompatActivity
 
             transaction.add(R.id.scroll_container,fragment,HORIZONTAL_SCROLL_TAG);
 
-            //transaction.addToBackStack(null);
+            transaction.addToBackStack(null);
 
             transaction.commit();
 
@@ -156,7 +156,7 @@ public class ScrollActivity extends AppCompatActivity
             FragmentManager manager = getSupportFragmentManager();
             FragmentTransaction transaction = manager.beginTransaction();
             transaction.add(R.id.scroll_container,fragment,VERTICAL_SCROLL_TAG);
-            //transaction.addToBackStack(null);
+            transaction.addToBackStack(null);
             transaction.commit();
             mFragmentTagList.add(VERTICAL_SCROLL_TAG);
 

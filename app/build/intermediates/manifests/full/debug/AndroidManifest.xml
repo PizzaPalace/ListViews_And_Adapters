@@ -79,6 +79,10 @@
             android:name="com.scrollableviewsandfragments.SwipeActivity"
             android:label="@string/title_activity_swipe" >
         </activity>
+        <activity
+            android:name="com.Threads.ThreadActivity"
+            android:label="@string/title_activity_thread" >
+        </activity>
     </application>
 
 </manifest>

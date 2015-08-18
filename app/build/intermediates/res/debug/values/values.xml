@@ -53,6 +53,7 @@
         <item>Saving State</item>
         <item>JSON</item>
         <item>Making network requests</item>
+        <item>Multithreading</item>
     </string-array>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
@@ -226,6 +227,7 @@
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="text_size">20sp</dimen>
+    <dimen name="text_size_large">100dp</dimen>
     <dimen name="title_size">40sp</dimen>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
@@ -307,6 +309,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="threads">Threads</string>
     <string name="title_activity_horizontal_scroll">HorizontalScrollActivity</string>
     <string name="title_activity_json">JSONActivity</string>
     <string name="title_activity_network">NetworkActivity</string>
@@ -315,6 +318,7 @@
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_swipe">SwipeActivity</string>
     <string name="title_activity_third">ThirdActivity</string>
+    <string name="title_activity_thread">ThreadActivity</string>
     <string name="title_activity_tutorial">TutorialActivity</string>
     <string name="title_activity_tutorial_7">Tutorial_7</string>
     <string name="vertical">Vertical Scroll</string>

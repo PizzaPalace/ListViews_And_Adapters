@@ -60,7 +60,7 @@
         <activity
             android:name="com.json.JSONActivity"
             android:label="@string/title_activity_json"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.matrimonysense.android_tutorial_06.MainActivity" />
@@ -72,6 +72,10 @@
         <activity
             android:name="com.scrollableviewsandfragments.SwipeActivity"
             android:label="@string/title_activity_swipe" >
+        </activity>
+        <activity
+            android:name="com.Threads.ThreadActivity"
+            android:label="@string/title_activity_thread" >
         </activity>
     </application>
 

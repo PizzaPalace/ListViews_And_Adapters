@@ -1,4 +1,5 @@
 <resources>
+    <string name="threads">Threads</string>
     <!-- sample values of text views -->
     <string name="sample_name">Sample Name</string>
     <string name="sample_fav_color">Sample Color</string>
@@ -87,6 +88,7 @@
         <item>Saving State</item>
         <item>JSON</item>
         <item>Making network requests</item>
+        <item>Multithreading</item>
     </string-array>
     <string name="click_me_07">Tutorial 7</string>
     <string name="image_description">Continent</string>
@@ -118,4 +120,5 @@
     <string name="title_activity_json">JSONActivity</string>
     <string name="title_activity_saved_state">SavedStateActivity</string>
     <string name="title_activity_swipe">SwipeActivity</string>
+    <string name="title_activity_thread">ThreadActivity</string>
 </resources>

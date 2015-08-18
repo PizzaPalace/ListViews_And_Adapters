@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.Threads.ThreadActivity;
 import com.com.training.android_tutorial_07.Tutorial_7Activity;
 import com.json.JSONActivity;
 import com.more_on_list_views.TutorialActivity;
@@ -91,6 +92,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 6:
                         intent = new Intent(getApplicationContext(),NetworkActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 7:
+                        intent = new Intent(getApplicationContext(),ThreadActivity.class);
                         startActivity(intent);
                         break;
                 }

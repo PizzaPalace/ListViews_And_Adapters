@@ -1,4 +1,11 @@
 <resources>
+    <string name="hint_three">Third hint here</string>
+    <string name="hint_two">Second hint here</string>
+    <string name="hint_one">First hint here</string>
+    <string name="three">Three</string>
+    <string name="two">Two</string>
+    <string name="one">One</string>
+
     <string name="threads">Threads</string>
     <!-- sample values of text views -->
     <string name="sample_name">Sample Name</string>
@@ -89,6 +96,8 @@
         <item>JSON</item>
         <item>Making network requests</item>
         <item>Multithreading</item>
+        <item>Intents</item>
+        <item>BroadcastReceivers</item>
     </string-array>
     <string name="click_me_07">Tutorial 7</string>
     <string name="image_description">Continent</string>
@@ -121,4 +130,6 @@
     <string name="title_activity_saved_state">SavedStateActivity</string>
     <string name="title_activity_swipe">SwipeActivity</string>
     <string name="title_activity_thread">ThreadActivity</string>
+    <string name="title_activity_intent">IntentActivity</string>
+    <string name="title_activity_broadcast">BroadcastActivity</string>
 </resources>

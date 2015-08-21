@@ -54,6 +54,8 @@
         <item>JSON</item>
         <item>Making network requests</item>
         <item>Multithreading</item>
+        <item>Intents</item>
+        <item>BroadcastReceivers</item>
     </string-array>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
@@ -284,6 +286,9 @@
     <string name="fav_color">Enter your favourite color</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
+    <string name="hint_one">First hint here</string>
+    <string name="hint_three">Third hint here</string>
+    <string name="hint_two">Second hint here</string>
     <string name="horizontal">Horizontal Scroll</string>
     <string name="image_description">Continent</string>
     <string name="ishant">Ishant</string>
@@ -291,6 +296,7 @@
     <string name="mothertongue">Enter your mother tongue</string>
     <string name="name">Enter your name</string>
     <string name="number">Enter you number</string>
+    <string name="one">One</string>
     <string name="pager">Pager</string>
     <string name="sample_fav_color">Sample Color</string>
     <string name="sample_mothertongue">Sample Mother Tongue</string>
@@ -310,7 +316,10 @@
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="threads">Threads</string>
+    <string name="three">Three</string>
+    <string name="title_activity_broadcast">BroadcastActivity</string>
     <string name="title_activity_horizontal_scroll">HorizontalScrollActivity</string>
+    <string name="title_activity_intent">IntentActivity</string>
     <string name="title_activity_json">JSONActivity</string>
     <string name="title_activity_network">NetworkActivity</string>
     <string name="title_activity_saved_state">SavedStateActivity</string>
@@ -321,6 +330,7 @@
     <string name="title_activity_thread">ThreadActivity</string>
     <string name="title_activity_tutorial">TutorialActivity</string>
     <string name="title_activity_tutorial_7">Tutorial_7</string>
+    <string name="two">Two</string>
     <string name="vertical">Vertical Scroll</string>
     <string name="zaheer">Zaheer</string>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->

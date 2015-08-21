@@ -1,0 +1,74 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rahul.matchify.com.sample.broadcastreceivers.BroadcastFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/edit_text_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_one"/>
+    <Button
+        android:id="@+id/first_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/one"
+        android:layout_below="@id/edit_text_one"/>
+    <EditText
+        android:id="@+id/edit_text_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_two"
+        android:layout_below="@id/first_button"/>
+
+    <Button
+        android:id="@+id/second_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/two"
+        android:layout_below="@id/edit_text_two"/>
+
+    <EditText
+        android:id="@+id/edit_text_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_three"
+        android:layout_below="@id/second_button"/>
+
+
+    <Button
+        android:id="@+id/third_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/three"
+        android:layout_below="@id/edit_text_three"/>
+
+    <TextView
+        android:id="@+id/text_view_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/one"
+        android:layout_below="@id/third_button"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/text_view_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/two"
+        android:layout_below="@id/text_view_one"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/text_view_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/three"
+        android:layout_below="@id/text_view_two"
+        android:layout_margin="20dp"/>
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/layout/fragment_broadcast.xml -->

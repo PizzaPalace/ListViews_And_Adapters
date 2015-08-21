@@ -34,7 +34,6 @@ public class NetworkActivity extends AppCompatActivity {
     Receiver receiver;
     ImageView mImageView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +46,10 @@ public class NetworkActivity extends AppCompatActivity {
         Intent intent = new Intent(this,HTTPService.class);
         startService(intent);
 
-
+String str="a";
+        Log.v("a",Integer.toString(str.hashCode()));
+        str=str+"b";
+        Log.v("b",Integer.toString(str.hashCode()));
     }
 
     @Override
@@ -111,7 +113,13 @@ public class NetworkActivity extends AppCompatActivity {
         }
         catch(Exception exception){
             exception.printStackTrace();
+
+
+
+
             return null;
+
+
         }
     }
 

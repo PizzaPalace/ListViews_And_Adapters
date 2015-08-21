@@ -55,6 +55,7 @@ public class HTTPService extends IntentService {
         intent.putExtra(EXTRA_PARAM1, param1);
         intent.putExtra(EXTRA_PARAM2, param2);
         context.startService(intent);
+
     }
 
     /**

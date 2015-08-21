@@ -12,7 +12,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.Threads.ThreadActivity;
+import com.broadcastreceivers.BroadcastActivity;
 import com.com.training.android_tutorial_07.Tutorial_7Activity;
+import com.intents.IntentActivity;
 import com.json.JSONActivity;
 import com.more_on_list_views.TutorialActivity;
 import com.networking.NetworkActivity;
@@ -96,6 +98,14 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 7:
                         intent = new Intent(getApplicationContext(),ThreadActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 8:
+                        intent = new Intent(getApplicationContext(),IntentActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 9:
+                        intent = new Intent(getApplicationContext(),BroadcastActivity.class);
                         startActivity(intent);
                         break;
                 }

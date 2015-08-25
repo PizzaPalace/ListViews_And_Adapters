@@ -78,6 +78,4 @@ public class ThreadService extends Service {
 
         Log.v("ON DESTROY","ON DESTROY");
     }
-
-
 }

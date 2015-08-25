@@ -68,7 +68,7 @@ public class ThreadActivity extends AppCompatActivity implements
         FragmentTransaction transaction = manager.beginTransaction();
         ThreadFragment fragment = new ThreadFragment();
         transaction.add(R.id.container,fragment,TAG);
-        transaction.addToBackStack(null);
+        //transaction.addToBackStack(null);
         transaction.commit();
     }
 

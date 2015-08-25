@@ -8,11 +8,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.matrimonysense.android_tutorial_06.R;
 
 public class IntentActivity extends AppCompatActivity implements
                                    IntentFragment.OnFragmentInteractionListener{
+
+
+    ImageView mImageView;
+    public static final int PHOTO_CHOOSER_REQUEST_CODE = 1;
+    public static final int CAMERA_CHOOSER_REQUEST_CODE = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

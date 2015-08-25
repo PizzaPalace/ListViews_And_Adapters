@@ -2,14 +2,20 @@ package com.intents;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.matrimonysense.android_tutorial_06.R;
 
@@ -30,6 +36,12 @@ public class IntentFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    ImageView mImageView;
+    Button mButtonLeft, mButtonRight;
+
+    public static final int PHOTO_CHOOSER_REQUEST_CODE = 1;
+    public static final int CAMERA_CHOOSER_REQUEST_CODE = 20;
 
     private OnFragmentInteractionListener mListener;
 
@@ -68,12 +80,43 @@ public class IntentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_intent, container, false);
+        View view = inflater.inflate(R.layout.fragment_intent, container, false);
+        mImageView = (ImageView)view.findViewById(R.id.stretched_image);
+        mButtonLeft = (Button)view.findViewById(R.id.button);
+        mButtonRight = (Button)view.findViewById(R.id.camera_button);
+
+        mButtonLeft.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent =  new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"select chooser"),PHOTO_CHOOSER_REQUEST_CODE);
+
+            }
+        });
+
+        mButtonRight.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent();
+                intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent,CAMERA_CHOOSER_REQUEST_CODE);
+
+            }
+        });
+
+        return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
-
+         super.onActivityCreated(savedInstanceState);
         /*Intent intent = new Intent();
         intent.addCategory(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.setAction(Intent.ACTION_VIEW);
@@ -119,4 +162,48 @@ public class IntentFragment extends Fragment {
         public void onFragmentInteraction(Uri uri);
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        Log.v("REQUEST_CODE",Integer.toString(requestCode));
+        Log.v("RESULT_CODE",Integer.toString(resultCode));
+        //Uri selectedImageUri = data.getData();
+
+        if(requestCode == PHOTO_CHOOSER_REQUEST_CODE){
+
+            if(resultCode == getActivity().RESULT_OK){
+                Log.v("WELL INSIDE", "WELL INSIDE");
+                Uri uri = data.getData();
+
+                if(uri == null){
+                    return;
+                }
+
+                else{
+
+                    String[] projection = {MediaStore.Images.Media.DATA};
+                    Cursor cursor = getActivity().getContentResolver().query(uri, projection, null, null, null);
+                    cursor.moveToFirst();
+                    int column_index = cursor.getColumnIndex(MediaStore.Images.Media.DATA);
+                    cursor.moveToFirst();
+                    String path = cursor.getString(column_index);
+
+                    Drawable drawable = Drawable.createFromPath(path);
+                    mImageView.setImageDrawable(drawable);
+
+                }
+
+            }
+        }
+        else if(requestCode == CAMERA_CHOOSER_REQUEST_CODE){
+
+            if(resultCode == getActivity().RESULT_OK){
+
+                Bundle extras = data.getExtras();
+                Bitmap imageBitmap = (Bitmap) extras.get("data");
+                mImageView.setImageBitmap(imageBitmap);
+
+            }
+
+        }
+    }
 }

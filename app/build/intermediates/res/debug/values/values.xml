@@ -317,6 +317,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="take_photo">Take Photo</string>
     <string name="threads">Threads Indeed</string>
     <string name="three">Three</string>
     <string name="title_activity_broadcast">BroadcastActivity</string>

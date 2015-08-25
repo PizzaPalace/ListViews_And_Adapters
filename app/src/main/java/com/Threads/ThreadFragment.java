@@ -125,7 +125,7 @@ public class ThreadFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                mHandlerRight.post(new Runnable(){
+                /*mHandlerRight.post(new Runnable(){
 
                     @Override
                     public void run() {
@@ -135,7 +135,7 @@ public class ThreadFragment extends Fragment {
                         Intent intent = new Intent(getActivity(),ThreadService.class);
                         getActivity().bindService(intent,mServiceConnection, getActivity().BIND_AUTO_CREATE);
                     }
-                });
+                });*/
 
             }
         });
@@ -204,7 +204,7 @@ public class ThreadFragment extends Fragment {
         };
 
         Intent intent = new Intent(getActivity(),ThreadService.class);
-        //getActivity().startService(intent);
+        getActivity().startService(intent);
         //getActivity().bindService(intent,mServiceConnection, getActivity().BIND_AUTO_CREATE);
 
 

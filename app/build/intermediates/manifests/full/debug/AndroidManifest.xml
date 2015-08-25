@@ -118,6 +118,12 @@
                 <action android:name="com.broadcastreceivers.OrderedBroadcast" />
             </intent-filter>
         </receiver>
+
+        <service
+            android:name="com.Threads.ThreadService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>

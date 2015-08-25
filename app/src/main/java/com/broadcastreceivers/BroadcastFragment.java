@@ -120,6 +120,7 @@ public class BroadcastFragment extends Fragment{
                 getActivity().sendOrderedBroadcast(broadcastintent,null);
 
 
+
             }
         });
 

@@ -1,13 +1,17 @@
 package com.Threads;
 
 import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.matrimonysense.android_tutorial_06.R;
 
@@ -16,6 +20,8 @@ public class ThreadActivity extends AppCompatActivity implements
                              ThreadFragment.OnFragmentInteractionListener{
 
     private final static String TAG ="THREAD_FRAGMENT_TAG";
+    TextView mTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,9 @@ public class ThreadActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_thread);
         // add Fragment to backstack
         addFragment();
+
+        mTextView = (TextView) findViewById(R.id.text_view);
+
     }
 
 
@@ -62,4 +71,5 @@ public class ThreadActivity extends AppCompatActivity implements
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
 }

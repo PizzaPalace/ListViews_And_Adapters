@@ -1,14 +1,22 @@
 package com.Threads;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Looper;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +43,11 @@ public class ThreadFragment extends Fragment {
     private String mParam2;
 
     TextView mTextView;
-    HashSet<String> mSet;
+    MyAsyncTask mTask;
+    Handler mHandler,mHandlerLeft, mHandlerRight;
+    Button mButtonLeft,mButtonRight;
+    ThreadService mService;
+    ServiceConnection mServiceConnection;
 
     private OnFragmentInteractionListener mListener;
 
@@ -77,6 +89,57 @@ public class ThreadFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_thread, container, false);
 
         mTextView = (TextView)view.findViewById(R.id.text_view);
+        mButtonLeft = (Button) view.findViewById(R.id.button_one);
+
+        mHandlerLeft = new Handler();
+        mHandlerRight = new Handler();
+
+        Looper looperLeft = mHandlerLeft.getLooper();
+        Looper looperRight = mHandlerRight.getLooper();
+
+        Thread threadLeft = looperLeft.getThread();
+        Thread threadRight = looperRight.getThread();
+
+        Log.v("THREAD LEFT",threadLeft.getName());
+        Log.v("THREAD RIGHT",threadRight.getName());
+
+        mButtonLeft.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                mHandlerLeft.post(new Runnable(){
+
+                    @Override
+                    public void run() {
+
+                        Log.v("HANDLER LEFT","HANDLER LEFT");
+                    }
+                });
+            }
+        });
+
+        mButtonRight = (Button) view.findViewById(R.id.button_two);
+        mButtonRight.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                mHandlerRight.post(new Runnable(){
+
+                    @Override
+                    public void run() {
+
+
+                        Log.v("HANDLER RIGHT","HANDLER RIGHT");
+                        Intent intent = new Intent(getActivity(),ThreadService.class);
+                        getActivity().bindService(intent,mServiceConnection, getActivity().BIND_AUTO_CREATE);
+                    }
+                });
+
+            }
+        });
+
         return view;
     }
 
@@ -84,7 +147,76 @@ public class ThreadFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState){
        super.onActivityCreated(savedInstanceState);
 
-        threadTest();
+
+
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+
+        mTask = new MyAsyncTask();
+        mTask.execute();
+
+        mHandler = new Handler();
+
+        mHandler.post(new Runnable(){
+
+            @Override
+            public void run() {
+
+                mTextView.setText("FIRST");
+            }
+        });
+
+        mTextView.setText("SECOND");
+        String string = mTextView.getText().toString();
+        Log.v("OUTPUT",string);
+
+        Thread thread = new Thread(new Runnable(){
+
+            @Override
+            public void run() {
+
+                mTextView.setText("FROM EXTERNAL THREAD");
+                String output = mTextView.getText().toString();
+                Log.v("EXTERNAL THREAD",output);
+            }
+        });
+
+        thread.run();
+        String name = thread.getName();
+        Log.v("NAME",name);
+
+        mServiceConnection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder service) {
+
+                Log.v("CONNECTED","ON SERVICE CONNECTED");
+
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+
+                Log.v("DISCONNECTED","ON SERVICE DISCONNECTED");
+            }
+        };
+
+        Intent intent = new Intent(getActivity(),ThreadService.class);
+        //getActivity().startService(intent);
+        //getActivity().bindService(intent,mServiceConnection, getActivity().BIND_AUTO_CREATE);
+
+
+
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+
+        //getActivity().unbindService(mServiceConnection);
+
     }
 
 
@@ -128,25 +260,16 @@ public class ThreadFragment extends Fragment {
         public void onFragmentInteraction(Uri uri);
     }
 
+    private class MyAsyncTask extends AsyncTask<Void,Void,Void> {
 
-    private void threadTest(){
+        @Override
+        protected Void doInBackground(Void... params) {
 
-        Thread thread = new Thread(new Runnable(){
+            mTextView.setText("FOO");
 
-            @Override
-            public void run() {
-                Log.v("INSIDE THREAD", "THREAD INSIDE");
-                Toast.makeText(getActivity(),"Toast from inside the thread",Toast.LENGTH_SHORT).show();
-                mTextView.setText("FROM INSIDE THREAD");
-            }
-        });
-
-        thread.run();
-
+            return null;
+        }
     }
-
-
-    //private class MyAsyncTask extends AsyncTask<>
 
 
 }

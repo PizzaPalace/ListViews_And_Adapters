@@ -74,10 +74,10 @@ public class IntentFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
 
-        Intent intent = new Intent();
+        /*Intent intent = new Intent();
         intent.addCategory(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.setAction(Intent.ACTION_VIEW);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -11,6 +11,12 @@
     >
 
 
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"/>
+
 
 </RelativeLayout>
 <!-- From: file:/C:/Users/rahul/AndroidStudioProjects/Android_Tutorial_06/app/src/main/res/layout/activity_thread.xml -->

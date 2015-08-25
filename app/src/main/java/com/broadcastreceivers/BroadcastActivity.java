@@ -42,6 +42,8 @@ public class BroadcastActivity extends AppCompatActivity
         mReceiverTwo = new ReceiverTwo(this);
         mReceiverThree = new ReceiverThree(this);
 
+
+
         // adds Fragment to activity
         populateFragment();
 

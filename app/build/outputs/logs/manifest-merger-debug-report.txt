@@ -179,6 +179,14 @@ ADDED from AndroidManifest.xml:107:9
 		ADDED from AndroidManifest.xml:109:13
 	android:name
 		ADDED from AndroidManifest.xml:108:13
+service#com.Threads.ThreadService
+ADDED from AndroidManifest.xml:116:9
+	android:exported
+		ADDED from AndroidManifest.xml:119:13
+	android:enabled
+		ADDED from AndroidManifest.xml:118:13
+	android:name
+		ADDED from AndroidManifest.xml:117:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.2.1:20:5
